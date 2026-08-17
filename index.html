@@ -3,378 +3,972 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- ✏️ ALTERE AQUI: Título da aba do seu site -->
-  <title>Minha Loja - Nome do Produto</title>
-  
-  <link rel="stylesheet" href="styles.css">
+
+  <title>MAX STORES — Tênis & Streetwear</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- ========================================== -->
-  <!-- 📌 CABEÇALHO / MENU DE NAVEGAÇÃO           -->
-  <!-- ========================================== -->
-  <header class="header">
-    <div class="header-container">
-      
-      <!-- LOGO -->
-      <a href="#" class="logo-link">
-        <svg class="nike-logo" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21.707 5.293c-.391-.391-1.023-.391-1.414 0l-12 12c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l12-12c.391-.391.391-1.023 0-1.414z"/>
-          <path d="M21.1 5.3c-.6-.4-1.4-.2-1.8.4L8.5 18.2 4.2 13.9c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.5.3.7.3s.5-.1.7-.3L21.5 6.7c.4-.6.2-1.4-.4-1.8z"/>
-        </svg>
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <div class="header-container">
+
+    <a href="#" class="logo">
+      MAX <span>STORES</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#inicio" class="active">Início</a>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#masculino">Masculino</a>
+      <a href="#feminino">Feminino</a>
+      <a href="#ofertas">Ofertas</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="search">
+        🔍
+        <input type="text" placeholder="Buscar tênis...">
+      </div>
+
+      <button class="header-icon">
+        ♡
+      </button>
+
+      <button class="header-icon cart-button" onclick="openCart()">
+        🛒
+        <span id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-background">
+    MAX
+  </div>
+
+  <div class="hero-container">
+
+    <div class="hero-content">
+
+      <span class="hero-label">
+        ⚡ NOVA COLEÇÃO 2026
+      </span>
+
+      <h1>
+        SEU ESTILO.
+        <br>
+        <span>SEU TÊNIS.</span>
+      </h1>
+
+      <p>
+        Descubra os tênis que combinam com seu estilo.
+        Modelos esportivos, casuais e streetwear selecionados
+        especialmente pela Max Stores.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#lancamentos" class="btn primary">
+          Comprar agora →
+        </a>
+
+        <a href="#categorias" class="btn secondary">
+          Explorar coleção
+        </a>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <strong>+500</strong>
+          <span>Modelos</span>
+        </div>
+
+        <div>
+          <strong>+10k</strong>
+          <span>Clientes</span>
+        </div>
+
+        <div>
+          <strong>4.9 ★</strong>
+          <span>Avaliação</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-product">
+
+      <div class="hero-glow"></div>
+
+      <img
+        src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Tênis esportivo Max Stores"
+      >
+
+      <div class="floating-card">
+
+        <span>DESTAQUE</span>
+
+        <strong>MAX RUNNER</strong>
+
+        <small>
+          Performance • Conforto • Estilo
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MARCAS / BENEFÍCIOS
+===================================================== -->
+
+<section class="benefits">
+
+  <div class="benefit">
+    <span>🚚</span>
+    <div>
+      <strong>Entrega rápida</strong>
+      <small>Receba seu pedido com segurança</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <span>🔒</span>
+    <div>
+      <strong>Compra segura</strong>
+      <small>Seus dados protegidos</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <span>↩️</span>
+    <div>
+      <strong>Troca fácil</strong>
+      <small>Troque seu produto sem complicação</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <span>★</span>
+    <div>
+      <strong>Qualidade Max</strong>
+      <small>Produtos selecionados</small>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<section class="products" id="lancamentos">
+
+  <div class="section-header">
+
+    <div>
+      <span>MAX STORES</span>
+      <h2>Mais procurados</h2>
+    </div>
+
+    <div class="filters">
+
+      <button class="filter active" onclick="filterProducts('all', this)">
+        Todos
+      </button>
+
+      <button class="filter" onclick="filterProducts('masculino', this)">
+        Masculino
+      </button>
+
+      <button class="filter" onclick="filterProducts('feminino', this)">
+        Feminino
+      </button>
+
+      <button class="filter" onclick="filterProducts('sport', this)">
+        Esportivo
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <!-- PRODUTO 1 -->
+
+    <article class="product-card" data-category="masculino">
+
+      <div class="product-image">
+
+        <span class="badge hot">
+          MAIS VENDIDO
+        </span>
+
+        <button class="favorite">
+          ♡
+        </button>
+
+        <img
+          src="https://images.pexels.com/photos/6748330/pexels-photo-6748330.jpeg?auto=compress&cs=tinysrgb&w=900"
+          alt="Max Street"
+        >
+
+        <button
+          class="quick-add"
+          onclick="addToCart('Max Street', 199.99, 'https://images.pexels.com/photos/6748330/pexels-photo-6748330.jpeg?auto=compress&cs=tinysrgb&w=900')"
+        >
+          + Adicionar
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <small>STREETWEAR</small>
+
+        <h3>Max Street</h3>
+
+        <p>
+          Tênis casual para o dia a dia.
+        </p>
+
+        <div class="product-bottom">
+
+          <strong>R$ 199,99</strong>
+
+          <button
+            onclick="addToCart('Max Street', 199.99, 'https://images.pexels.com/photos/6748330/pexels-photo-6748330.jpeg?auto=compress&cs=tinysrgb&w=900')"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 2 -->
+
+    <article class="product-card" data-category="feminino">
+
+      <div class="product-image">
+
+        <span class="badge new">
+          NOVO
+        </span>
+
+        <button class="favorite">
+          ♡
+        </button>
+
+        <img
+          src="https://images.pexels.com/photos/10657974/pexels-photo-10657974.jpeg?auto=compress&cs=tinysrgb&w=900"
+          alt="Max Color feminino"
+        >
+
+        <button
+          class="quick-add"
+          onclick="addToCart('Max Color', 299.99, 'https://images.pexels.com/photos/10657974/pexels-photo-10657974.jpeg?auto=compress&cs=tinysrgb&w=900')"
+        >
+          + Adicionar
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <small>FEMININO</small>
+
+        <h3>Max Color</h3>
+
+        <p>
+          Design moderno e confortável.
+        </p>
+
+        <div class="product-bottom">
+
+          <strong>R$ 299,99</strong>
+
+          <button
+            onclick="addToCart('Max Color', 299.99, 'https://images.pexels.com/photos/10657974/pexels-photo-10657974.jpeg?auto=compress&cs=tinysrgb&w=900')"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 3 -->
+
+    <article class="product-card" data-category="sport">
+
+      <div class="product-image">
+
+        <span class="badge sport">
+          PERFORMANCE
+        </span>
+
+        <button class="favorite">
+          ♡
+        </button>
+
+        <img
+          src="https://images.pexels.com/photos/6776080/pexels-photo-6776080.jpeg?auto=compress&cs=tinysrgb&w=900"
+          alt="Max Runner"
+        >
+
+        <button
+          class="quick-add"
+          onclick="addToCart('Max Runner', 399.99, 'https://images.pexels.com/photos/6776080/pexels-photo-6776080.jpeg?auto=compress&cs=tinysrgb&w=900')"
+        >
+          + Adicionar
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <small>ESPORTIVO</small>
+
+        <h3>Max Runner</h3>
+
+        <p>
+          Leveza e estabilidade para seus treinos.
+        </p>
+
+        <div class="product-bottom">
+
+          <strong>R$ 399,99</strong>
+
+          <button
+            onclick="addToCart('Max Runner', 399.99, 'https://images.pexels.com/photos/6776080/pexels-photo-6776080.jpeg?auto=compress&cs=tinysrgb&w=900')"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 4 -->
+
+    <article class="product-card" data-category="masculino">
+
+      <div class="product-image">
+
+        <span class="badge sale">
+          -20%
+        </span>
+
+        <button class="favorite">
+          ♡
+        </button>
+
+        <img
+          src="https://images.pexels.com/photos/12284598/pexels-photo-12284598.jpeg?auto=compress&cs=tinysrgb&w=900"
+          alt="Max Urban"
+        >
+
+        <button
+          class="quick-add"
+          onclick="addToCart('Max Urban', 150, 'https://images.pexels.com/photos/12284598/pexels-photo-12284598.jpeg?auto=compress&cs=tinysrgb&w=900')"
+        >
+          + Adicionar
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <small>CASUAL</small>
+
+        <h3>Max Urban</h3>
+
+        <p>
+          Estilo urbano para qualquer ocasião.
+        </p>
+
+        <div class="product-bottom">
+
+          <div>
+            <strong>R$ 150,00</strong>
+            <del>R$ 200,00</del>
+          </div>
+
+          <button
+            onclick="addToCart('Max Urban', 150, 'https://images.pexels.com/photos/12284598/pexels-photo-12284598.jpeg?auto=compress&cs=tinysrgb&w=900')"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="categories" id="categorias">
+
+  <div class="section-title-center">
+
+    <span>EXPLORE</span>
+
+    <h2>Encontre seu estilo</h2>
+
+  </div>
+
+
+  <div class="category-grid">
+
+
+    <a href="#masculino" class="category-card">
+
+      <img
+        src="https://images.pexels.com/photos/1750564/pexels-photo-1750564.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        alt="Tênis masculino"
+      >
+
+      <div>
+        <small>COLEÇÃO</small>
+        <h3>Masculino</h3>
+        <span>Ver coleção →</span>
+      </div>
+
+    </a>
+
+
+    <a href="#feminino" class="category-card">
+
+      <img
+        src="https://images.pexels.com/photos/7203479/pexels-photo-7203479.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        alt="Tênis feminino"
+      >
+
+      <div>
+        <small>COLEÇÃO</small>
+        <h3>Feminino</h3>
+        <span>Ver coleção →</span>
+      </div>
+
+    </a>
+
+
+    <a href="#lancamentos" class="category-card">
+
+      <img
+        src="https://images.pexels.com/photos/10217693/pexels-photo-10217693.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        alt="Tênis streetwear"
+      >
+
+      <div>
+        <small>COLEÇÃO</small>
+        <h3>Streetwear</h3>
+        <span>Ver coleção →</span>
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
+
+<section class="technology">
+
+  <div class="technology-image">
+
+    <img
+      src="https://images.pexels.com/photos/12969390/pexels-photo-12969390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      alt="Tênis Max Stores"
+    >
+
+  </div>
+
+  <div class="technology-content">
+
+    <span>MAX TECHNOLOGY</span>
+
+    <h2>
+      CONFORTO QUE
+      <br>
+      ACOMPANHA VOCÊ.
+    </h2>
+
+    <p>
+      Cada modelo da Max Stores é escolhido pensando
+      em conforto, estilo e qualidade para você aproveitar
+      todos os momentos.
+    </p>
+
+    <div class="features">
+
+      <div>
+        <strong>01</strong>
+        <span>Conforto durante todo o dia</span>
+      </div>
+
+      <div>
+        <strong>02</strong>
+        <span>Design moderno</span>
+      </div>
+
+      <div>
+        <strong>03</strong>
+        <span>Materiais selecionados</span>
+      </div>
+
+    </div>
+
+    <a href="#lancamentos" class="btn primary">
+      Conhecer produtos →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+  <div>
+
+    <span>MAX STORES</span>
+
+    <h2>
+      FIQUE POR DENTRO.
+    </h2>
+
+    <p>
+      Receba novidades, lançamentos e ofertas especiais.
+    </p>
+
+    <form onsubmit="subscribe(event)">
+
+      <input
+        type="email"
+        placeholder="Seu melhor e-mail"
+        required
+      >
+
+      <button>
+        Cadastrar →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+
+      <a class="logo">
+        MAX <span>STORES</span>
       </a>
 
-      <!-- ✏️ ALTERE AQUI: Os links do menu -->
-      <nav class="nav-menu">
-        <a href="#lancamentos" class="nav-link active">Lançamentos</a>
-        <a href="#masculino" class="nav-link">Masculino</a>
-        <a href="#feminino" class="nav-link">Feminino</a>
-        <a href="#tecnologia" class="nav-link">Inovação</a>
-        <a href="#ofertas" class="nav-link badge-link">Ofertas</a>
-      </nav>
-
-      <!-- BARRA DE BUSCA E CARRINHO -->
-      <div class="header-actions">
-        <div class="search-bar">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <!-- ✏️ ALTERE AQUI: Texto dentro da barra de busca -->
-          <input type="text" placeholder="Buscar produtos...">
-        </div>
-        <button class="icon-btn" aria-label="Favoritos">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-        <button class="icon-btn cart-btn" aria-label="Carrinho">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <!-- ✏️ ALTERE AQUI: Número de itens no carrinho -->
-          <span class="cart-count">2</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 BANNER PRINCIPAL (HERO)                 -->
-  <!-- ========================================== -->
-  <section class="hero">
-    <!-- ✏️ ALTERE AQUI: Texto gigante de fundo -->
-    <div class="hero-bg-text">MEU PRODUCTO</div>
-
-    <div class="hero-container">
-      <div class="hero-content">
-        <!-- ✏️ ALTERE AQUI: Selo pequeno acima do título -->
-        <span class="hero-tag">NOVO LANÇAMENTO</span>
-        
-        <!-- ✏️ ALTERE AQUI: Título do produto principal -->
-        <h1 class="hero-title">NOME DO<br><span class="highlight">PRODUTO</span></h1>
-        
-        <!-- ✏️ ALTERE AQUI: Descrição principal -->
-        <p class="hero-description">
-          Escreva aqui a descrição do seu produto em destaque. Explique os diferenciais, o conforto, o estilo e por que a pessoa deve comprar agora.
-        </p>
-
-        <!-- ✏️ ALTERE AQUI: Botões de Ação -->
-        <div class="hero-cta">
-          <a href="#produtos" class="btn btn-primary">Comprar Agora — R$ 999,90</a>
-          <a href="#tecnologia" class="btn btn-outline">Ver Detalhes</a>
-        </div>
-      </div>
-
-      <!-- 🖼️ IMAGEM PRINCIPAL -->
-      <div class="hero-image-wrapper">
-        <div class="glow-effect"></div>
-        <!-- ✏️ ALTERE AQUI: Cole o caminho da sua imagem no src abaixo (Ex: src="imagem1.jpg") -->
-        <img src="tenis-principal.png" alt="Imagem do Produto Principal" class="hero-img">
-        
-        <div class="product-badge">
-          <!-- ✏️ ALTERE AQUI: Informações do cartãozinho sobre a foto -->
-          <span class="badge-title">Nike Air Pegasus</span>
-          <span class="badge-subtitle">Cor: Preto / Vermelho</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 VITRINE DE PRODUTOS / DESTAQUES        -->
-  <!-- ========================================== -->
-  <section id="lancamentos" class="products-section">
-    <div class="section-container">
-      
-      <div class="section-header">
-        <div>
-          <!-- ✏️ ALTERE AQUI: Subtítulo da seção -->
-          <span class="section-subtitle">COLEÇÃO 2026</span>
-          <!-- ✏️ ALTERE AQUI: Título da seção -->
-          <h2 class="section-title">Destaques da Semana</h2>
-        </div>
-        
-        <!-- ✏️ ALTERE AQUI: Categorias/Filtros -->
-        <div class="filter-tabs">
-          <button class="tab-btn active">Todos</button>
-          <button class="tab-btn">Opção 1</button>
-          <button class="tab-btn">Opção 2</button>
-          <button class="tab-btn">Opção 3</button>
-        </div>
-      </div>
-
-      <!-- GRID DE CARDS DE PRODUTOS -->
-      <div class="product-grid">
-        
-        <!-- 🛒 CARD DE PRODUTO 1 -->
-        <div class="product-card">
-          <div class="card-image-box">
-            <!-- ✏️ ALTERE AQUI: Etiqueta do produto -->
-            <span class="tag tag-hot">Mais Vendido</span>
-            <!-- 🖼️ ✏️ ALTERE AQUI: Imagem do Card 1 -->
-            <img src="tenisfeminino1" alt="Produto 1">
-            <button class="fav-btn" aria-label="Favoritar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div class="card-info">
-            <!-- ✏️ ALTERE AQUI: Categoria, Nome, Descrição e Preço -->
-            <span class="category">Categoria / Genero</span>
-            <h3 class="product-name">Nome do Produto 1</h3>
-            <p class="product-desc">Breve texto explicativo sobre este item.</p>
-            <div class="card-footer">
-              <span class="price">R$ 199,99</span>
-              <button class="btn-icon-add" title="Adicionar ao carrinho">+</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 🛒 CARD DE PRODUTO 2 -->
-        <div class="product-card">
-          <div class="card-image-box">
-            <!-- ✏️ ALTERE AQUI: Etiqueta do produto -->
-            <span class="tag tag-new">Lançamento</span>
-            <!-- 🖼️ ✏️ ALTERE AQUI: Imagem do Card 2 -->
-            <img src="COLOQUE_SUA_IMAGEM_CARD2.jpg" alt="Produto 2">
-            <button class="fav-btn" aria-label="Favoritar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div class="card-info">
-            <!-- ✏️ ALTERE AQUI: Categoria, Nome, Descrição e Preço -->
-            <span class="category">Categoria / Estilo</span>
-            <h3 class="product-name">Nome do Produto 2</h3>
-            <p class="product-desc">Breve texto explicativo sobre este item.</p>
-            <div class="card-footer">
-              <span class="price">R$ 299,99</span>
-              <button class="btn-icon-add" title="Adicionar ao carrinho">+</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 🛒 CARD DE PRODUTO 3 -->
-        <div class="product-card">
-          <div class="card-image-box">
-            <!-- 🖼️ ✏️ ALTERE AQUI: Imagem do Card 3 -->
-            <img src="COLOQUE_SUA_IMAGEM_CARD3.jpg" alt="Produto 3">
-            <button class="fav-btn" aria-label="Favoritar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div class="card-info">
-            <!-- ✏️ ALTERE AQUI: Categoria, Nome, Descrição e Preço -->
-            <span class="category">Categoria / Estilo</span>
-            <h3 class="product-name">Nome do Produto 3</h3>
-            <p class="product-desc">Breve texto explicativo sobre este item.</p>
-            <div class="card-footer">
-              <span class="price">R$ 399,99</span>
-              <button class="btn-icon-add" title="Adicionar ao carrinho">+</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 🛒 CARD DE PRODUTO 4 (COM DESCONTO) -->
-        <div class="product-card">
-          <div class="card-image-box">
-            <!-- ✏️ ALTERE AQUI: Tag de desconto -->
-            <span class="tag tag-promo">-20% OFF</span>
-            <!-- 🖼️ ✏️ ALTERE AQUI: Imagem do Card 4 -->
-            <img src="COLOQUE_SUA_IMAGEM_CARD4.jpg" alt="Produto 4">
-            <button class="fav-btn" aria-label="Favoritar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div class="card-info">
-            <!-- ✏️ ALTERE AQUI: Categoria, Nome, Descrição e Preços -->
-            <span class="category">Categoria / Promoção</span>
-            <h3 class="product-name">Nome do Produto 4</h3>
-            <p class="product-desc">Breve texto explicativo sobre este item.</p>
-            <div class="card-footer">
-              <div class="price-container">
-                <span class="price">R$ 150,00</span>
-                <span class="price-old">R$ 200,00</span>
-              </div>
-              <button class="btn-icon-add" title="Adicionar ao carrinho">+</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 BANNER DE INOVAÇÃO / TECNOLOGIA         -->
-  <!-- ========================================== -->
-  <section id="tecnologia" class="tech-banner">
-    <div class="tech-container">
-      <div class="tech-image">
-        <!-- 🖼️ ✏️ ALTERE AQUI: Imagem da seção de tecnologia -->
-        <img src="COLOQUE_SUA_IMAGEM_TECNOLOGIA.jpg" alt="Tecnologia">
-      </div>
-      
-      <div class="tech-content">
-        <!-- ✏️ ALTERE AQUI: Textos da seção de tecnologia/diferenciais -->
-        <span class="tech-subtitle">TECNOLOGIA EXCLUSIVA</span>
-        <h2>Título da Sua Inovação</h2>
-        <p>
-          Explique aqui a qualidade do seu material, como o produto é fabricado ou a tecnologia por trás da sua marca.
-        </p>
-        
-        <ul class="tech-features">
-          <li>
-            <div class="feature-icon">⚡</div>
-            <div>
-              <strong>Diferencial 1:</strong>
-              <p>Descrição curta do primeiro diferencial.</p>
-            </div>
-          </li>
-          <li>
-            <div class="feature-icon">🛡️</div>
-            <div>
-              <strong>Diferencial 2:</strong>
-              <p>Descrição curta do segundo diferencial.</p>
-            </div>
-          </li>
-        </ul>
-        
-        <a href="#" class="btn btn-primary">Saiba Mais</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 CATEGORIAS EM DESTAQUE                 -->
-  <!-- ========================================== -->
-  <section class="categories-section">
-    <div class="section-container">
-      <h2 class="section-title text-center">Navegue por Categoria</h2>
-      
-      <div class="categories-grid">
-        
-        <!-- CATEGORIA 1 -->
-        <div class="category-card">
-          <!-- 🖼️ ✏️ ALTERE AQUI: Imagem Categoria 1 -->
-          <img src="COLOQUE_IMAGEM_CATEGORIA1.jpg" alt="Categoria 1">
-          <div class="category-overlay">
-            <h3>Masculino</h3>
-            <a href="#masculino" class="btn-category">Ver Coleção &rarr;</a>
-          </div>
-        </div>
-
-        <!-- CATEGORIA 2 -->
-        <div class="category-card">
-          <!-- 🖼️ ✏️ ALTERE AQUI: Imagem Categoria 2 -->
-          <img src="COLOQUE_IMAGEM_CATEGORIA2.jpg" alt="Categoria 2">
-          <div class="category-overlay">
-            <h3>Feminino</h3>
-            <a href="#feminino" class="btn-category">Ver Coleção &rarr;</a>
-          </div>
-        </div>
-
-        <!-- CATEGORIA 3 -->
-        <div class="category-card">
-          <!-- 🖼️ ✏️ ALTERE AQUI: Imagem Categoria 3 -->
-          <img src="COLOQUE_IMAGEM_CATEGORIA3.jpg" alt="Categoria 3">
-          <div class="category-overlay">
-            <h3>Acessórios</h3>
-            <a href="#acessorios" class="btn-category">Ver Coleção &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 NEWSLETTER / CADASTRO DE E-MAIL        -->
-  <!-- ========================================== -->
-  <section class="newsletter-section">
-    <div class="newsletter-container">
-      <!-- ✏️ ALTERE AQUI: Chamada para inscrição -->
-      <h2>FIQUE POR DENTRO DAS NOVIDADES</h2>
-      <p>Cadastre seu e-mail para receber descontos exclusivos e lançamentos em primeira mão.</p>
-      
-      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Obrigado por se inscrever!');">
-        <input type="email" placeholder="Digite seu e-mail aqui..." required>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-      </form>
-    </div>
-  </section>
-
-
-  <!-- ========================================== -->
-  <!-- 📌 RODAPÉ (FOOTER)                         -->
-  <!-- ========================================== -->
-  <footer class="footer">
-    <div class="footer-container">
-      
-      <div class="footer-col">
-        <h4>PRODUTOS</h4>
-        <ul>
-          <li><a href="#">Lançamentos</a></li>
-          <li><a href="#">Mais Vendidos</a></li>
-          <li><a href="#">Ofertas</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>SUPORTE</h4>
-        <ul>
-          <li><a href="#">Rastrear Pedido</a></li>
-          <li><a href="#">Devoluções</a></li>
-          <li><a href="#">Fale Conosco</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>SOBRE NÓS</h4>
-        <ul>
-          <li><a href="#">Nossa História</a></li>
-          <li><a href="#">Trabalhe Conosco</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>REDES SOCIAIS</h4>
-        <div class="social-links">
-          <!-- ✏️ ALTERE AQUI: Nome/links das suas redes -->
-          <a href="#" class="social-icon">Instagram</a>
-          <a href="#" class="social-icon">YouTube</a>
-          <a href="#" class="social-icon">TikTok</a>
-        </div>
-      </div>
+      <p>
+        Seu estilo começa pelos seus pés.
+      </p>
 
     </div>
 
-    <div class="footer-bottom">
-      <!-- ✏️ ALTERE AQUI: Direitos autorais -->
-      <p>&copy; 2026 Sua Marca. Todos os direitos reservados.</p>
+    <div>
+      <h4>PRODUTOS</h4>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#lancamentos">Mais vendidos</a>
+      <a href="#ofertas">Ofertas</a>
     </div>
-  </footer>
+
+    <div>
+      <h4>SUPORTE</h4>
+      <a href="#">Rastrear pedido</a>
+      <a href="#">Trocas</a>
+      <a href="#">Fale conosco</a>
+    </div>
+
+    <div>
+      <h4>REDES</h4>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 MAX STORES — Todos os direitos reservados.
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     CARRINHO LATERAL
+===================================================== -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<aside class="cart-sidebar" id="cartSidebar">
+
+  <div class="cart-header">
+
+    <h2>Seu carrinho</h2>
+
+    <button onclick="closeCart()">
+      ×
+    </button>
+
+  </div>
+
+  <div id="cartItems" class="cart-items">
+
+    <div class="empty-cart">
+      <span>🛒</span>
+      <p>Seu carrinho está vazio.</p>
+    </div>
+
+  </div>
+
+  <div class="cart-footer">
+
+    <div>
+      <span>Total</span>
+      <strong id="cartTotal">R$ 0,00</strong>
+    </div>
+
+    <button class="btn primary checkout" onclick="checkout()">
+      Finalizar compra
+    </button>
+
+  </div>
+
+</aside>
+
+
+<script>
+
+let cart = [];
+
+
+/* =====================================================
+   CARRINHO
+===================================================== */
+
+function addToCart(name, price, image) {
+
+  const existing = cart.find(item => item.name === name);
+
+  if (existing) {
+
+    existing.quantity++;
+
+  } else {
+
+    cart.push({
+      name,
+      price,
+      image,
+      quantity: 1
+    });
+
+  }
+
+  updateCart();
+
+  openCart();
+
+}
+
+
+function removeFromCart(index) {
+
+  cart.splice(index, 1);
+
+  updateCart();
+
+}
+
+
+function changeQuantity(index, amount) {
+
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+
+    cart.splice(index, 1);
+
+  }
+
+  updateCart();
+
+}
+
+
+function updateCart() {
+
+  const items = document.getElementById("cartItems");
+
+  const count = cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
+  document.getElementById("cartCount").textContent = count;
+
+
+  if (cart.length === 0) {
+
+    items.innerHTML = `
+      <div class="empty-cart">
+        <span>🛒</span>
+        <p>Seu carrinho está vazio.</p>
+      </div>
+    `;
+
+    document.getElementById("cartTotal").textContent =
+      "R$ 0,00";
+
+    return;
+
+  }
+
+
+  items.innerHTML = cart.map((item, index) => `
+
+    <div class="cart-item">
+
+      <img src="${item.image}" alt="${item.name}">
+
+      <div>
+
+        <strong>${item.name}</strong>
+
+        <small>
+          R$ ${item.price.toFixed(2).replace(".", ",")}
+        </small>
+
+        <div class="quantity">
+
+          <button onclick="changeQuantity(${index}, -1)">
+            −
+          </button>
+
+          <span>${item.quantity}</span>
+
+          <button onclick="changeQuantity(${index}, 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+      <button
+        class="remove"
+        onclick="removeFromCart(${index})"
+      >
+        ×
+      </button>
+
+    </div>
+
+  `).join("");
+
+
+  const total = cart.reduce(
+    (sum, item) =>
+      sum + item.price * item.quantity,
+    0
+  );
+
+
+  document.getElementById("cartTotal").textContent =
+    "R$ " +
+    total.toFixed(2).replace(".", ",");
+
+}
+
+
+/* =====================================================
+   ABRIR / FECHAR CARRINHO
+===================================================== */
+
+function openCart() {
+
+  document
+    .getElementById("cartSidebar")
+    .classList.add("open");
+
+  document
+    .getElementById("cartOverlay")
+    .classList.add("open");
+
+}
+
+
+function closeCart() {
+
+  document
+    .getElementById("cartSidebar")
+    .classList.remove("open");
+
+  document
+    .getElementById("cartOverlay")
+    .classList.remove("open");
+
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+function filterProducts(category, button) {
+
+  document
+    .querySelectorAll(".filter")
+    .forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+  button.classList.add("active");
+
+
+  document
+    .querySelectorAll(".product-card")
+    .forEach(card => {
+
+      if (
+        category === "all" ||
+        card.dataset.category === category
+      ) {
+
+        card.style.display = "flex";
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+function subscribe(event) {
+
+  event.preventDefault();
+
+  alert(
+    "Cadastro realizado com sucesso! 🔥"
+  );
+
+  event.target.reset();
+
+}
+
+
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
+function checkout() {
+
+  if (cart.length === 0) {
+
+    alert(
+      "Seu carrinho está vazio."
+    );
+
+    return;
+
+  }
+
+  alert(
+    "Pedido preparado! 🛒\n\n" +
+    "A próxima etapa seria conectar um sistema real de pagamento."
+  );
+
+}
+
+</script>
 
 </body>
 </html>
